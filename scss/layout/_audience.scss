@@ -1,0 +1,59 @@
+.audience {
+  background-color: var(--blue);
+  padding: 55px 0 35px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 36px 15px 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+
+    & img {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.audience-special {
+  padding: 55px 0 190px;
+  background-color: var(--primary-light);
+  background-image: url(../../images/background/grass-light.webp);
+  background-size: 250%;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: center;
+
+  &__text {
+    color: var(--darkgray);
+    font-weight: 600;
+    text-align: center;
+    padding: 36px 15px 0;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 36px auto 0;
+  }
+}

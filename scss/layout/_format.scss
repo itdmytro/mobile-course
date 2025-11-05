@@ -1,0 +1,33 @@
+.format {
+  background-color: var(--blue);
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  &__list {
+    margin: 24px auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    color: var(--darkgray);
+    margin-bottom: 16px;
+    padding-left: 32px;
+    position: relative;
+  }
+
+  &__icon {
+    font-size: 20px;
+    color: var(--green);
+    position: absolute;
+    left: 0;
+  }
+
+  &__text {
+    border-top: 1px solid var(--lightblue);
+    border-bottom: 1px solid var(--lightblue);
+    padding: 50px 10px;
+    text-align: center;
+  }
+}

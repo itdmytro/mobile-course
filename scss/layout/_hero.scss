@@ -1,0 +1,89 @@
+.hero {
+  padding-top: 18px;
+  padding-bottom: 180px;
+  background-image: url(../../images/background/hero-bg.webp);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: -50px bottom;
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__time {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 600;
+
+    & span {
+      color: var(--blue);
+    }
+  }
+
+  &__lead {
+    line-height: 1.5;
+    margin: 26px auto 64px;
+    text-align: center;
+  }
+
+  &__prop {
+    color: var(--green);
+    line-height: 1.5;
+    max-width: 250px;
+  }
+
+  &__price {
+    padding-top: 28px;
+    padding-bottom: 42px;
+    line-height: 1;
+  }
+
+  &__bonus {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+  }
+
+  &__bonustext {
+    font-size: 13px;
+
+    & strong {
+      display: block;
+      font-weight: 600;
+    }
+  }
+}
+
+.price {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+
+  font-weight: 600;
+
+  &__current {
+    font-size: 35px;
+  }
+
+  &__full {
+    color: var(--blue);
+    margin-top: 16px;
+    font-size: 14px;
+
+    & span {
+      text-decoration: line-through;
+    }
+  }
+}

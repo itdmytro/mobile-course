@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Онлайн-курс &quot;АВТОПОЛИВ СВОЇМИ РУКАМИ: ОБСЛУГОВУВАННЯ ТА ЗИМ&quot;
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Первый экран -->
+      <section class="container hero">
+        <p class="hero__subtitle">Онлайн-курс від <br />Олександра Стельмаха</p>
+        <h1 class="hero__title uppercase">
+          АВТОПОЛИВ СВОЇМИ РУКАМИ: ОБСЛУГОВУВАННЯ ТА ЗИМОВА КОНСЕРВАЦІЯ
+        </h1>
+
+        <p class="hero__time">
+          <span>Старт курсу</span>
+          —
+          <time id="timeOfStart" class="uppercase"></time>
+        </p>
+
+        <p class="hero__lead uppercase">
+          НАБРИДЛО ПЛАТИТИ МАЙСТРАМ І ЗАЛИШАТИСЯ БЕЗПОРАДНИМ, КОЛИ АВТОПОЛИВ
+          ЛАМАЄТЬСЯ?
+        </p>
+
+        <p class="hero__prop">
+          Навчися обслуговувати автополив сам: швидко, легко й професійно.
+          Короткі відео та прості інструкції зекономлять гроші й нерви.
+        </p>
+
+        <div class="price hero__price">
+          <p class="price__current uppercase">390 ГРН</p>
+          <p class="price__full">замість <span>1290 грн</span></p>
+        </div>
+
+        <button class="button uppercase">
+          приєднатись
+          <span class="icon-done icon__done"></span>
+        </button>
+
+        <div class="hero__bonus">
+          <span class="icon-gift icon__gift"></span>
+          <p class="hero__bonustext">
+            <strong>Після реєстрації ти отримаєш БОНУС:</strong>
+            Доступ до закритої Telegram-спільноти «Майстри Автополиву» +
+            щомісячна сесія «Запитай експерта»
+          </p>
+        </div>
+      </section>
+
+      <!-- Для кого курс -->
+      <section class="audience">
+        <h2 class="section-title uppercase">
+          ЦЕЙ КУРС ДЛЯ ТЕБЕ, <span class="white-text">ЯКЩО ТИ:</span>
+        </h2>
+        <ul class="audience__list">
+          <li class="audience__item">
+            <div class="audience__image">
+              <img
+                src="./images/content/beauty-grass.webp"
+                alt="Доглянутий газон на ділянці"
+              />
+            </div>
+            <p class="audience__text">
+              Маєш приватний будинок чи дачу і хочеш сам контролювати свій
+              автополив, а не залежати від майстрів.
+            </p>
+          </li>
+          <li class="audience__item">
+            <div class="audience__image">
+              <img
+                src="./images/content/money-in-grass.webp"
+                alt="Газон — це гроші"
+              />
+            </div>
+            <p class="audience__text">
+              Втомився щороку платити втридорога і чекати, поки знайдеться
+              «вільний спеціаліст».
+            </p>
+          </li>
+          <li class="audience__item">
+            <div class="audience__image">
+              <img
+                src="./images/content/hand-on-grass.webp"
+                alt="Рука на доглянутому газоні"
+                class="audience__image"
+              />
+            </div>
+            <p class="audience__text">
+              Хочеш, щоб твій газон завжди був зелений і доглянутий, незалежно
+              від обставин.
+            </p>
+          </li>
+          <li class="audience__item">
+            <div class="audience__image">
+              <img
+                src="./images/content/happy-woman.webp"
+                alt="Дівчина читає, сидячі на газоні"
+                class="audience__image"
+              />
+            </div>
+            <p class="audience__text">
+              Ніколи не обслуговував систему самостійно, але хочеш простих і
+              зрозумілих інструкцій, без складних термінів.
+            </p>
+          </li>
+          <li class="audience__item">
+            <div class="audience__image">
+              <img
+                src="./images/content/solar-clock.webp"
+                alt="Сонячний годинник на газоні"
+                class="audience__image"
+              />
+            </div>
+            <p class="audience__text">
+              Цінуєш час і гроші, і не готовий витрачати їх на те, що можна
+              зробити самому за годину.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="audience-special">
+        <h2 class="section-title">
+          <span class="darkgreen-text">ТАКОЖ ЦЕЙ КУРС</span> ДЛЯ ТИХ ХТО :
+        </h2>
+        <p class="audience-special__text uppercase">
+          ХОЧЕ ЗНАТИ, ЩО РОБЛЯТЬ МАЙСТРИ З ТВОЇМ АВТОПОЛИВОМ, І СКІЛЬКИ ЦЕ
+          НАСПРАВДІ МАЄ КОШТУВАТИ, ЩОБ ТЕБЕ БІЛЬШЕ НІХТО НЕ ОБДУРИВ.
+        </p>
+
+        <svg
+          class="audience-special__image"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          enable-background="new 0 0 100 100"
+          xml:space="preserve"
+          height="100%"
+        >
+          <g fill="currentColor">
+            <path
+              d="M82.385,13.676L69.65,26.413V9.42H5v81.159h64.65V51.64L95,26.289L82.385,13.676z M65.271,86.199H9.383V13.801h55.887   v16.993L43.728,52.332L28.42,37.024L15.806,49.637l27.922,27.92l21.542-21.532V86.199z M43.728,71.362L22.006,49.638l6.414-6.417   l15.308,15.307l38.657-38.653l6.42,6.414L43.728,71.362z"
+              fill="#000000"
+            ></path>
+          </g>
+        </svg>
+      </section>
+
+      <!-- Про автора -->
+      <section class="container about-author">
+        <div class="about-author__image">
+          <img src="./images/content/oleksandr.webp" alt="Олександр Стельмах" />
+        </div>
+        <h2 class="section-title white-text">ПРИВІТ, Я ОЛЕКСАНДР СТЕЛЬМАХ</h2>
+        <ul class="about-author__list">
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              Я засновник компанії Екосвіт Україна, вже понад
+              <strong>
+                15 років працюю у сфері ландшафтного дизайну та автополиву.
+              </strong>
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              За цей час ми реалізували
+              <strong> 350+ проєктів </strong>
+              різної складності та обслуговували
+              <strong> 600+ приватних ділянок. </strong>
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              Мій досвід показує: більшість людей переплачують майстрам за
+              прості речі, які можна зробити самостійно.
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              Я створив цей курс, щоб допомогти власникам будинків і дач
+              звільнитися <strong>від залежності від виконавців.</strong>
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              Я проведу тебе покроково: від діагностики й обслуговування — до
+              зимової консервації.
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              Після цього ти зможеш впоратися з 90% типових проблем
+              <strong>сам, без стресу та зайвих витрат.</strong>
+            </p>
+          </li>
+          <li class="about-author__item">
+            <span class="icon-plus about-author__icon"></span>
+            <p>
+              А ще я —
+              <strong>сім’янин та батько маленької доньки.</strong>
+              І я точно знаю: найцінніше, що ми маємо, — це час і спокій у
+              власному домі.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Про досвід -->
+      <section class="container experience">
+        <h2 class="section-title">МІЙ ДОСВІД ГОВОРИТЬ САМ ЗА СЕБЕ:</h2>
+        <ul class="experience__list">
+          <li class="experience__item">
+            <span class="icon-done experience__icon"></span>
+            <p>
+              <span class="darkgreen-text">15 років</span> у сфері ландшафтного
+              дизайну та автополиву
+            </p>
+          </li>
+          <li class="experience__item">
+            <span class="icon-done experience__icon"></span>
+            <p>350+ реалізованих проєктів різної складності</p>
+          </li>
+          <li class="experience__item">
+            <span class="icon-done experience__icon"></span>
+            <p>600+ обслуговуваних приватних ділянок</p>
+          </li>
+          <li class="experience__item">
+            <span class="icon-done experience__icon"></span>
+            <p>70% клієнтів звертаються повторно або рекомендують друзям</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Відгуки -->
+      <section class="container reviews">
+        <h2 class="section-title">А ОСЬ ЩО КАЖУТЬ ТІ, ХТО ПРАЦЮВАВ ЗІ МНОЮ</h2>
+        <div class="reviews__container">
+          <button class="reviews__slider-btn slider-prev">
+            <span class="icon-arrow"></span>
+          </button>
+
+          <div class="reviews__slider">
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review1.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review2.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review3.webp" alt="Відгук" />
+            </div>
+          </div>
+
+          <button class="reviews__slider-btn slider-next">
+            <span class="icon-arrow"></span>
+          </button>
+        </div>
+        <div class="reviews__slider-dots"></div>
+      </section>
+
+      <!-- Заклик до дїї -->
+      <section class="cta container">
+        <h2 class="section-title cta__title white-text uppercase">
+          НЕ ХОЧЕШ РОБИТИ ВСЕ ВЛАСНОРУЧ?
+        </h2>
+        <p class="cta__text">
+          Курс дасть тобі знання, щоб контролювати роботу майстрів і розуміти,
+          за що ти реально платиш.
+        </p>
+        <svg
+          viewBox="0 0 50 50"
+          xmlns="http://www.w3.org/2000/svg"
+          height="100%"
+          class="cta__icon"
+        >
+          <path
+            d="M23 14v15l-4.5 8H11l4.5-8H8V14h15zm19 0v15l-4.5 8H30l4.5-8H27V14h15z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+        <p class="cta__price">
+          Все це лише за 390 грн — сума, яка окупиться вже після першого сезону
+          (ти зекономиш у кілька разів більше, бо не будешь переплачувати за
+          роботу).
+        </p>
+      </section>
+
+      <!-- Програма курсу -->
+      <section class="container program">
+        <div class="program__head">
+          <h2 class="section-title">
+            <span class="green-text">ПРОГРАМА</span> КУРСУ
+          </h2>
+          <p class="program__info program__text">
+            Курс складається з
+            <strong>5 модулів</strong>
+            : один теоретичний і чотири практичних. Усе просто, зрозуміло і по
+            кроках:
+          </p>
+        </div>
+
+        <!-- Модуль 1 -->
+        <article class="program__module">
+          <p class="program__number">МОДУЛЬ -1</p>
+          <h3 class="program__title">З ЧОГО СКЛАДАЄТЬСЯ <br />АВТОПОЛИВ</h3>
+          <p class="program__text">
+            Які ключові вузли. Які фірми використовують в Україні.
+          </p>
+
+          <ul class="program__list">
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>Програматор (види, несправності, програмування та режими)</p>
+            </li>
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>
+                Фільтри. Навіщо потрібні. Які бувають. Де знаходяться. Як
+                чистити та з якою періодичністю.
+              </p>
+            </li>
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>
+                Форсунки та дощувачі (види форсунок, як підібрати та як
+                замінити)
+              </p>
+            </li>
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>
+                Електромагнітні клапани (види, діагностика, ремонт, заміна,
+                пошук у землі)
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Модуль 2 -->
+        <article class="program__module program__module--dark">
+          <p class="program__number">МОДУЛЬ -2</p>
+          <h3 class="program__title">
+            ЯКІ НЕСПРАВНОСТІ БУВАЮТЬ ТА <br />ЯК ЇХ ДІАГНОСТУВАТИ
+          </h3>
+
+          <ul class="program__list">
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>Види та ремонт крапельного автополиву</p>
+            </li>
+            <li class="program__item">
+              <span class="icon-done program__icon"></span>
+              <p>Пориви під землею. Як знайти та усунути самостійно.</p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Модуль 3 -->
+        <article class="program__module">
+          <p class="program__number">МОДУЛЬ -3</p>
+          <h3 class="program__title">
+            КОНСЕРВАЦІЯ АВТОПОЛИВУ НА ЗИМУ ТА ЗАПУСК НАВЕСНІ
+          </h3>
+        </article>
+
+        <!-- Модуль 4 -->
+        <article class="program__module program__module--dark">
+          <p class="program__number">МОДУЛЬ -4</p>
+          <h3 class="program__title">
+            ДЕ КУПУВАТИ ОБЛАДНАННЯ ТА ЯКЕ КРАЩЕ ВИКОРИСТОВУВАТИ
+          </h3>
+        </article>
+      </section>
+
+      <!-- Як буде проходити навчання -->
+      <section class="container format">
+        <h2 class="section-title">ЯК БУДЕ ПРОХОДИТИ НАВЧАННЯ?</h2>
+        <ul class="format__list">
+          <li class="format__item">
+            <span class="format__icon icon-messagemessage"></span>
+            <p>
+              Одразу після оплати ви отримаєте доступ до уроківі зможете
+              розпочати заняття. Курс можна проходити в будь-який зручний час.
+            </p>
+          </li>
+          <li class="format__item">
+            <span class="format__icon icon-video"></span>
+            <p>
+              Одразу після оплати ви отримаєте доступ до уроківі зможете
+              розпочати заняття. Курс можна проходити в будь-який зручний час.
+            </p>
+          </li>
+          <li class="format__item">
+            <span class="format__icon icon-mobile"></span>
+            <p>
+              Доступ: із будь-якого пристрою — телефон, планшет чи комп’ютер.
+            </p>
+          </li>
+          <li class="format__item">
+            <span class="format__icon icon-calendar"></span>
+            <p>
+              Доступ до курсу буде впродовж двох місяців. Ви зможете повертатися
+              до укроків повторно або рухатися у комфортному для вас темпі.
+            </p>
+          </li>
+          <li class="format__item">
+            <span class="format__icon icon-like"></span>
+            <p>
+              Практика: після кожного блоку ти одразу застосовуєш знання на
+              своїй системі.
+            </p>
+          </li>
+          <li class="format__item">
+            <span class="format__icon icon-messagemessage"></span>
+            <p>
+              Підтримка: закрита
+              <strong>Telegram</strong>
+              -спільнота та
+              <strong>щомісячні зідзвони</strong>
+              «Запитай експерта».
+            </p>
+          </li>
+        </ul>
+
+        <p class="format__text">
+          Все зроблено так, щоб ти міг крок за кроком, у зручному темпі, довести
+          свій автополив до ідеального стану.
+        </p>
+      </section>
+
+      <!-- Гарантія -->
+      <section class="guarantee container">
+        <h2 class="section-title uppercase">
+          <span class="green-text">ГАРАНТІЯ</span><br />
+          <span class="white-text">БЕЗПЕКИ</span>
+        </h2>
+        <div class="guarantee__text">
+          <p>
+            Я впевнений у своєму курсі на всі 100%. Тому даю просту гарантію:
+          </p>
+          <p>
+            Якщо ти пройдеш курс і зрозумієш, що він тобі не допоміг або був
+            марним, — я поверну гроші без зайвих питань протягом 14 днів.
+          </p>
+          <p><strong>Твої ризики = нуль.</strong></p>
+          <p>
+            А ось що ти точно отримаєш: знання, впевненість і незалежність від
+            майстрів.
+          </p>
+        </div>
+        <div>
+          <svg
+            class="guarantee__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 32 32"
+            enable-background="new 0 0 32 32"
+            xml:space="preserve"
+            height="100%"
+          >
+            <g fill="currentColor">
+              <g fill="currentColor">
+                <path
+                  fill="currentColor"
+                  d="M16,31.3l-0.3-0.1C2.2,25.9,2.6,6.3,2.6,5.5l0-0.4l0.5-0.3C6.9,2.1,11.4,0.7,16,0.7    c4.6,0,9.1,1.4,12.9,4.1l0.5,0.3l0,0.4c0,0.8,0.5,20.4-13.1,25.7L16,31.3z M4.1,5.9C4.1,8.6,4.7,25,16,29.7    C27.3,25,27.9,8.6,27.9,5.9C24.4,3.5,20.3,2.2,16,2.2C11.7,2.2,7.6,3.5,4.1,5.9z"
+                ></path>
+              </g>
+              <g fill="currentColor">
+                <polygon
+                  fill="currentColor"
+                  points="14.2,18.8 11.2,15.8 12.3,14.8 14.2,16.7 19.7,11.1 20.8,12.2   "
+                ></polygon>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/timer.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>

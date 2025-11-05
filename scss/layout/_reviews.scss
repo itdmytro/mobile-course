@@ -1,0 +1,46 @@
+.reviews {
+  background-color: var(--primary-light);
+  padding-top: 24px;
+  padding-bottom: 20px;
+
+  &__container {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  &__slider {
+    margin-top: 20px;
+    padding-bottom: 24px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__slider-btn {
+    border: 1px solid var(--darkgray);
+    background-color: var(--darkgray);
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    & .icon-arrow {
+      color: var(--primary-light);
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      background-color: var(--primary-dark);
+      border-color: black;
+    }
+  }
+
+  &__slide img {
+    width: 100%;
+    height: auto;
+  }
+}

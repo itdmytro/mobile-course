@@ -1,0 +1,64 @@
+.program {
+  padding: 35px 0 0;
+  background-color: var(--primary-light);
+
+  &__head {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__info {
+    margin: 24px auto;
+  }
+
+  &__module {
+    padding: 30px 15px 60px;
+
+    &--dark {
+      background-color: var(--secondary-light);
+    }
+  }
+
+  &__number {
+    font-weight: 600;
+    color: var(--darkgreen);
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    color: var(--darkgray);
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: var(--darkgray);
+
+    & strong {
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    padding: 36px 0 12px;
+  }
+
+  &__item {
+    color: var(--darkgray);
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    color: var(--primary-light);
+    background-color: var(--darkgreen);
+    border-radius: 50%;
+    padding: 2px;
+  }
+}

@@ -1,0 +1,30 @@
+body {
+  color: var(--primary-light);
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+p strong {
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--darkgray);
+}
+
+.green-text {
+  color: var(--green);
+}
+
+.darkgreen-text {
+  color: var(--darkgreen);
+}
+
+.white-text {
+  color: var(--primary-light);
+}

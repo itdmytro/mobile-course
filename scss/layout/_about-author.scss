@@ -1,0 +1,75 @@
+.about-author {
+  background-color: var(--blue);
+  padding-top: 55px;
+  padding-bottom: 40px;
+
+  &__image {
+    height: 400px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 24px;
+
+    & img {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__list {
+    margin-top: 28px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: block;
+    background-color: var(--green);
+    color: var(--blue);
+    font-size: 20px;
+  }
+}
+
+.experience {
+  background-color: var(--primary-light);
+  padding-top: 55px;
+  padding-bottom: 20px;
+
+  &__item {
+    color: var(--darkgray);
+    font-weight: 600;
+    display: flex;
+    gap: 8px;
+    align-items: start;
+    margin-top: 16px;
+
+    &:first-child {
+      margin-top: 0;
+
+      & .experience__icon {
+        visibility: hidden;
+        color: transparent;
+      }
+    }
+  }
+
+  &__icon {
+    color: var(--primary-light);
+    background-color: var(--darkgray);
+    border-radius: 99px;
+    padding: 2px;
+  }
+}

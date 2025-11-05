@@ -1,0 +1,40 @@
+.cta {
+  padding: 60px 15px 75px;
+  background-color: var(--blue);
+  background-image: url(../../images/background/blue-bg.webp);
+  background-size: 110%;
+  background-position-x: center;
+  background-position-y: calc(100% + 145px);
+  background-repeat: no-repeat;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__text {
+    padding: 50px 10px;
+    margin-top: 24px;
+    border-top: 1px solid var(--lightblue);
+    border-bottom: 1px solid var(--lightblue);
+    text-align: center;
+    font-weight: 600;
+    line-height: 2;
+  }
+
+  &__icon {
+    background-color: var(--blue);
+    display: block;
+    height: 50px;
+    width: 70px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+
+    & * {
+      fill: var(--green);
+    }
+  }
+
+  &__price {
+    text-align: center;
+  }
+}
