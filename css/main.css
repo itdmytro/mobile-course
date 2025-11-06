@@ -234,17 +234,19 @@ main {
   position: fixed;
   z-index: 2;
   bottom: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(calc(100% + 10px));
-          transform: translateX(-50%) translateY(calc(100% + 10px));
+  left: 15px;
+  right: 15px;
+  margin: 0 auto;
+  -webkit-transform: translateY(calc(100% + 10px));
+          transform: translateY(calc(100% + 10px));
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .button--fixed.visible {
-  -webkit-transform: translateX(-50%) translateY(0);
-          transform: translateX(-50%) translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .icon__done {
@@ -897,4 +899,72 @@ main {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+}
+
+.modal {
+  color: var(--darkgray);
+}
+.modal__underlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background-color: var(--primary-dark);
+  opacity: 0.8;
+  z-index: 98;
+}
+.modal__body {
+  border-radius: 24px;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 15px;
+  background-color: var(--primary-light);
+}
+.modal__close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+.modal__close::after, .modal__close::before {
+  display: block;
+  height: 100px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
+  background-color: var(--lightgray);
+  cursor: pointer;
+}
+.modal__close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.modal__close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.modal__title {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 48px;
+}
+.modal__title span {
+  display: block;
+}
+.modal__subtitle {
+  text-align: center;
+  margin: 36px auto;
+}
+.modal__price {
+  font-size: 12px;
+  color: var(--darkgray);
 }/*# sourceMappingURL=main.css.map */

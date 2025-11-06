@@ -48,16 +48,18 @@ main {
 
   &--fixed {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
-    max-width: calc(430px - 30px);
+    max-width: 400px;
     position: fixed;
     z-index: 2;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(calc(100% + 10px));
+    left: 15px;
+    right: 15px;
+    margin: 0 auto;
+    transform: translateY(calc(100% + 10px));
     transition: transform 0.5s;
 
     &.visible {
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0);
     }
   }
 }
