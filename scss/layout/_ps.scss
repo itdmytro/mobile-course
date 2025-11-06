@@ -1,0 +1,43 @@
+.ps {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: var(--blue);
+  background-image: url(../../images/background/blue-bg.webp);
+  background-size: 110%;
+  background-position-x: center;
+  background-position-y: calc(100% + 75px);
+  background-repeat: no-repeat;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-top: 24px;
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+  }
+
+  &__icon {
+    color: var(--blue);
+    background-color: var(--primary-light);
+    border-radius: 99px;
+    padding: 2px;
+  }
+}

@@ -9,7 +9,7 @@ body {
 
 main {
   background-color: var(--primary-dark);
-  padding: 30px 0 180px;
+  padding: 30px 0 0;
 }
 
 .uppercase {
@@ -43,6 +43,21 @@ main {
 
     & .icon__done {
       border-color: var(--green);
+    }
+  }
+
+  &--fixed {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    max-width: calc(430px - 30px);
+    position: fixed;
+    z-index: 2;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% + 10px));
+    transition: transform 0.5s;
+
+    &.visible {
+      transform: translateX(-50%) translateY(0);
     }
   }
 }
