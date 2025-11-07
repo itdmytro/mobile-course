@@ -68,7 +68,7 @@
     font-weight: 600;
     font-size: 18px;
     text-align: center;
-    margin-top: 48px;
+    margin-top: 24px;
 
     & span {
       display: block;
@@ -77,7 +77,7 @@
 
   &__subtitle {
     text-align: center;
-    margin: 36px auto;
+    margin: 16px auto;
   }
 
   &__price {
@@ -115,7 +115,7 @@
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  margin: 12px auto 32px;
+  margin: 12px auto 12px;
   gap: 12px;
 
   &__input {
@@ -134,7 +134,7 @@
 
   &__button {
     width: 100%;
-    margin-top: 36px;
+    margin-top: 12px;
     justify-content: center;
     font-weight: 400;
   }

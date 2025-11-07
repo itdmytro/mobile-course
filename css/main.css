@@ -925,12 +925,6 @@ main {
   gap: 24px;
   font-weight: 300;
 }
-.footer__rights {
-  color: #ff779f;
-  text-align: right;
-  font-size: 10px;
-  padding: 10px 20px;
-}
 
 .contacts {
   color: var(--blue);
@@ -1035,14 +1029,14 @@ main {
   font-weight: 600;
   font-size: 18px;
   text-align: center;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 .modal__title span {
   display: block;
 }
 .modal__subtitle {
   text-align: center;
-  margin: 36px auto;
+  margin: 16px auto;
 }
 .modal__price {
   font-size: 12px;
@@ -1077,7 +1071,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 12px auto 32px;
+  margin: 12px auto 12px;
   gap: 12px;
 }
 .form__input {
@@ -1095,7 +1089,7 @@ main {
 }
 .form__button {
   width: 100%;
-  margin-top: 36px;
+  margin-top: 12px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
