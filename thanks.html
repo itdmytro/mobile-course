@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дякуємо за оплату!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2252245425247873");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=2252245425247873&ev=PageView&noscript=1"
+      />
+    </noscript>
+  </head>
+  <body>
+    <main class="result-page">
+      <section class="message">
+        <h2 class="message__title">Чудово, оплата успішна!</h2>
+        <p class="message__text">
+          <strong>Вибачте за незручності.</strong>
+        </p>
+        <p class="message__text">
+          Через технічні моменти дату старту курсу було перенесено на декілька
+          днів.
+        </p>
+        <p class="message__text">
+          Напишіть нам у підтримку, щоб дізнатися дату старту і отримати бонус
+          або ж ми повернемо вам кошти.
+        </p>
+        <p class="message__text">
+          <strong class="block">
+            Бонус — персональна консультація з експертом з автополиву.
+          </strong>
+          У разі термінової ситуації зверніться до служби підтримки — ми
+          організуємо онлайн-зустріч у найближчий зручний час.
+        </p>
+        <a
+          href="https://t.me/kurspidtrimka"
+          target="_blank"
+          class="button message__button uppercase"
+        >
+          Написати у підтримку
+        </a>
+        <p class="message__text">
+          E-mail:
+          <strong>
+            <a href="mailto:spilkasd@gmail.com" class="message__link">
+              spilkasd@gmail.com
+            </a>
+          </strong>
+        </p>
+      </section>
+    </main>
+
+    <!-- Событие покупки -->
+    <script>
+      fbq("track", "Purchase");
+    </script>
+  </body>
+</html>

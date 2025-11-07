@@ -23,14 +23,15 @@ document.getElementById("formSend").addEventListener("click", function (e) {
   const form = document.querySelector("form");
   const popup = document.querySelector(".popup");
 
-  function showMessage(text, type) {
+  function showMessage(text, type, callback) {
     popup.innerHTML = text;
     popup.classList.add("active", type);
 
     setTimeout(() => {
       popup.classList.remove("active", type);
       popup.innerHTML = "";
-    }, 2000);
+      if (callback) callback(); // вызываем колбэк после анимации
+    }, 2000); // длительность анимации
   }
 
   if (!email || !phone) {
@@ -47,26 +48,20 @@ document.getElementById("formSend").addEventListener("click", function (e) {
   const params = {
     email: email,
     phone: phone,
-    // EMAIL для отправки письма
     to_email: "spilkasd@gmail.com",
   };
 
   emailjs
     .send("service_9z809d1", "template_8tjxx76", params)
     .then(() => {
-      showMessage("Дякуємо за заявку!", "success");
+      showMessage("Дякуємо за заявку!", "success", () => {
+        document.querySelector(".modal")?.classList.remove("modal-open");
+        form.reset();
 
-      document.querySelector(".modal")?.classList.remove("modal-open");
-
-      form.reset();
-
-      setTimeout(() => {
-        window.open(
-          // НИЖЕ ВСТАВИТЬ ССЫЛКУ НА СТРАНИЦУ ОПЛАТЫ
-          "https://secure.wayforpay.com/page?vkh=690cd939-b63c-4946-8bc9-067d22d1dba8",
-          "_blank"
-        );
-      }, 2000);
+        // редирект только после анимации
+        window.location.href =
+          "https://secure.wayforpay.com/page?vkh=690cd939-b63c-4946-8bc9-067d22d1dba8";
+      });
     })
     .catch(() => {
       showMessage(

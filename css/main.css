@@ -329,6 +329,10 @@ main {
      object-fit: contain;
 }
 
+.block {
+  display: block;
+}
+
 .hero {
   padding-top: 18px;
   padding-bottom: 180px;
@@ -1135,4 +1139,51 @@ main {
 .countdown__info {
   font-size: 18px;
   opacity: 0.5;
+}
+
+.result-page {
+  background-color: var(--blue);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 16px;
+}
+
+.message {
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 24px;
+  background-color: var(--primary-light);
+  color: var(--darkgray);
+}
+.message__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.message__text {
+  margin-bottom: 24px;
+}
+.message__button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 12px 0 36px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.message__link {
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.message__link:hover {
+  color: var(--darkgreen);
 }/*# sourceMappingURL=main.css.map */

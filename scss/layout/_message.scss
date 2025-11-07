@@ -1,0 +1,42 @@
+.result-page {
+  background-color: var(--blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.message {
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 24px;
+  background-color: var(--primary-light);
+  color: var(--darkgray);
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    width: fit-content;
+    margin: 12px 0 36px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--darkgreen);
+    }
+  }
+}
