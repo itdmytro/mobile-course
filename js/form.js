@@ -47,6 +47,8 @@ document.getElementById("formSend").addEventListener("click", function (e) {
   const params = {
     email: email,
     phone: phone,
+    // EMAIL для отправки письма
+    to_email: "spilkasd@gmail.com",
   };
 
   emailjs
