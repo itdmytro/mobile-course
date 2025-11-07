@@ -31,13 +31,24 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      inset: 0;
+      background-color: var(--blue);
+      opacity: 0.3;
+      z-index: 2;
+    }
   }
 }
 
 .audience-special {
   padding: 55px 0 190px;
   background-color: var(--primary-light);
-  background-image: url(../../images/background/grass-light.webp);
+  background-image: url(../images/background/grass-light.webp);
   background-size: 250%;
   background-repeat: no-repeat;
   background-position-y: bottom;

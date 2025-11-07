@@ -26,24 +26,30 @@ if (timeOfStart) {
   timeOfStart.textContent = `${day} ${monthName}`;
 }
 
-// const countdownElement = document.getElementById("countdown");
+const countdownHour = document.getElementById("countdownHours");
+const countdownMinutes = document.getElementById("countdownMinutes");
+const countdownSeconds = document.getElementById("countdownSeconds");
 
-// function updateCountdown() {
-//   const now = new Date();
-//   const diff = targetDate - now;
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
 
-//   if (diff <= 0) {
-//     countdownElement.textContent = "Час настав!";
-//     clearInterval(timer);
-//     return;
-//   }
+  if (diff <= 0) {
+    countdownHour.textContent = "00";
+    countdownMinutes.textContent = "00";
+    countdownSeconds.textContent = "00";
+    clearInterval(timerInterval);
+    return;
+  }
 
-//   const hours = Math.floor(diff / 1000 / 60 / 60);
-//   const minutes = Math.floor((diff / 1000 / 60) % 60);
-//   const seconds = Math.floor((diff / 1000) % 60);
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-//   countdownElement.textContent = `${hours} год ${minutes} хв ${seconds} с`;
-// }
+  countdownHour.textContent = String(hours).padStart(2, "0");
+  countdownMinutes.textContent = String(minutes).padStart(2, "0");
+  countdownSeconds.textContent = String(seconds).padStart(2, "0");
+}
 
-// updateCountdown(); // перший виклик одразу
-// const timer = setInterval(updateCountdown, 1000);
+updateCountdown();
+const timerInterval = setInterval(updateCountdown, 1000);

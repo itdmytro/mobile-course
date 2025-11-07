@@ -89,3 +89,49 @@ main {
 .slider-prev {
   transform: rotate(-180deg);
 }
+
+.popup {
+  max-width: 300px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--secondary-light);
+  color: var(--darkgray);
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 999;
+  margin: 0 auto;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  transform: translateY(calc(-100% - 10px));
+  transition: transform 0.5s;
+
+  &.success {
+    box-shadow: 0 0 15px 3px rgba(0, 200, 83, 0.5);
+  }
+
+  &.error {
+    box-shadow: 0 0 15px 3px rgba(255, 82, 82, 0.5);
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 690px !important;
+  overflow: hidden;
+
+  & img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+}

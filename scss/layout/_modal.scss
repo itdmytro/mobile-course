@@ -1,5 +1,13 @@
 .modal {
   color: var(--darkgray);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+
+  &.opened {
+    visibility: visible;
+    opacity: 1;
+  }
 
   &__underlay {
     position: fixed;
@@ -12,7 +20,10 @@
   }
 
   &__body {
-    border-radius: 24px;
+    max-height: 90vh;
+    overflow-y: auto;
+    max-width: 370px;
+    border-radius: 12px;
     position: fixed;
     z-index: 99;
     top: 50%;
@@ -26,20 +37,22 @@
     display: block;
     width: 20px;
     height: 20px;
-    position: fixed;
+    position: absolute;
     right: 15px;
     top: 15px;
+    cursor: pointer;
 
     &::after,
     &::before {
+      content: "";
       display: block;
-      height: 100px;
+      height: 100%;
       width: 2px;
       position: absolute;
       left: 50%;
       transform: translateX(-1px);
       background-color: var(--lightgray);
-      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     &::before {
@@ -70,5 +83,88 @@
   &__price {
     font-size: 12px;
     color: var(--darkgray);
+    text-align: center;
+  }
+
+  &__price-current {
+    font-size: 16px;
+    color: #d65d7c;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  &__price-old {
+    & strong {
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    & strong {
+      display: block;
+    }
+  }
+}
+
+.form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 12px auto 32px;
+  gap: 12px;
+
+  &__input {
+    padding: 12px 30px;
+    background-color: #2527581f;
+    border-radius: 99px;
+    outline: 1px;
+    border: 1px solid #2527581f;
+    color: var(--darkgray);
+    transition: all 0.3s;
+
+    &:focus {
+      border-color: var(--darkgray);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 36px;
+    justify-content: center;
+    font-weight: 400;
+  }
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 48px;
+
+  &__block {
+    flex: 1 1 calc(100% / 3 - 24px);
+    padding: 12px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--darkgreen);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  &__info {
+    font-size: 18px;
+    opacity: 0.5;
   }
 }

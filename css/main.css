@@ -273,10 +273,66 @@ main {
           transform: rotate(-180deg);
 }
 
+.popup {
+  max-width: 300px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--secondary-light);
+  color: var(--darkgray);
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 999;
+  margin: 0 auto;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  -webkit-transform: translateY(calc(-100% - 10px));
+          transform: translateY(calc(-100% - 10px));
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.popup.success {
+  -webkit-box-shadow: 0 0 15px 3px rgba(0, 200, 83, 0.5);
+          box-shadow: 0 0 15px 3px rgba(0, 200, 83, 0.5);
+}
+.popup.error {
+  -webkit-box-shadow: 0 0 15px 3px rgba(255, 82, 82, 0.5);
+          box-shadow: 0 0 15px 3px rgba(255, 82, 82, 0.5);
+}
+.popup.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.slick-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 690px !important;
+  overflow: hidden;
+}
+.slick-slide img {
+  max-height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .hero {
   padding-top: 18px;
   padding-bottom: 180px;
-  background-image: url(../../images/background/hero-bg.webp);
+  background-image: url(../images/background/hero-bg.webp);
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: -50px bottom;
@@ -397,11 +453,21 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.audience__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background-color: var(--blue);
+  opacity: 0.3;
+  z-index: 2;
+}
 
 .audience-special {
   padding: 55px 0 190px;
   background-color: var(--primary-light);
-  background-image: url(../../images/background/grass-light.webp);
+  background-image: url(../images/background/grass-light.webp);
   background-size: 250%;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -548,7 +614,7 @@ main {
 .cta {
   padding: 60px 15px 75px;
   background-color: var(--blue);
-  background-image: url(../../images/background/blue-bg.webp);
+  background-image: url(../images/background/blue-bg.webp);
   background-size: 110%;
   background-position-x: center;
   background-position-y: calc(100% + 145px);
@@ -720,7 +786,7 @@ main {
   padding-top: 30px;
   padding-bottom: 80px;
   background-color: var(--blue);
-  background-image: url(../../images/background/blue-bg.webp);
+  background-image: url(../images/background/blue-bg.webp);
   background-size: 110%;
   background-position-x: center;
   background-position-y: calc(100% + 75px);
@@ -903,6 +969,14 @@ main {
 
 .modal {
   color: var(--darkgray);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.modal.opened {
+  visibility: visible;
+  opacity: 1;
 }
 .modal__underlay {
   position: fixed;
@@ -914,7 +988,10 @@ main {
   z-index: 98;
 }
 .modal__body {
-  border-radius: 24px;
+  max-height: 90vh;
+  overflow-y: auto;
+  max-width: 370px;
+  border-radius: 12px;
   position: fixed;
   z-index: 99;
   top: 50%;
@@ -928,20 +1005,23 @@ main {
   display: block;
   width: 20px;
   height: 20px;
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 15px;
+  cursor: pointer;
 }
 .modal__close::after, .modal__close::before {
+  content: "";
   display: block;
-  height: 100px;
+  height: 100%;
   width: 2px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
   background-color: var(--lightgray);
-  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 .modal__close::before {
   -webkit-transform: rotate(-45deg);
@@ -967,4 +1047,98 @@ main {
 .modal__price {
   font-size: 12px;
   color: var(--darkgray);
+  text-align: center;
+}
+.modal__price-current {
+  font-size: 16px;
+  color: #d65d7c;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.modal__price-old strong {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.modal__text {
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.modal__text strong {
+  display: block;
+}
+
+.form {
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12px auto 32px;
+  gap: 12px;
+}
+.form__input {
+  padding: 12px 30px;
+  background-color: rgba(37, 39, 88, 0.1215686275);
+  border-radius: 99px;
+  outline: 1px;
+  border: 1px solid rgba(37, 39, 88, 0.1215686275);
+  color: var(--darkgray);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  border-color: var(--darkgray);
+}
+.form__button {
+  width: 100%;
+  margin-top: 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+}
+
+.countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  padding-bottom: 48px;
+}
+.countdown__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(33.3333333333% - 24px);
+          flex: 1 1 calc(33.3333333333% - 24px);
+  padding: 12px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--darkgreen);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.countdown__content {
+  font-size: 36px;
+  font-weight: 600;
+}
+.countdown__info {
+  font-size: 18px;
+  opacity: 0.5;
 }/*# sourceMappingURL=main.css.map */

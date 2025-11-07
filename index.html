@@ -6,6 +6,12 @@
     <title>
       Онлайн-курс &quot;АВТОПОЛИВ СВОЇМИ РУКАМИ: ОБСЛУГОВУВАННЯ ТА ЗИМ&quot;
     </title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./images/favicon.png"
+      sizes="16x16"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -280,6 +286,18 @@
             </div>
             <div class="reviews__slide">
               <img src="./images/content/reviews/review3.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review4.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review5.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review6.webp" alt="Відгук" />
+            </div>
+            <div class="reviews__slide">
+              <img src="./images/content/reviews/review7.webp" alt="Відгук" />
             </div>
           </div>
 
@@ -761,14 +779,70 @@
           професіонала.
         </p>
 
-        <div class="modal__price">
-          <p class="modal__price-current">390 грн</p>
-          <p class="modal__price-old">
+        <p class="modal__price">
+          <span class="modal__price-current">390 грн</span>
+          <span class="modal__price-old">
             замість
-            <span>1290 грн</span>
-          </p>
+            <strong>1290 грн</strong>
+          </span>
+        </p>
+
+        <!-- Форма -->
+        <form class="form" method="post">
+          <label for="email"></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Ваш Email"
+            class="form__input"
+          />
+
+          <label for="phone"></label>
+          <input
+            type="phone"
+            name="phone"
+            id="phone"
+            placeholder="Ваш номер телефону"
+            class="form__input"
+          />
+
+          <button
+            class="button form__button uppercase"
+            type="submit"
+            id="formSend"
+          >
+            отримати доступ
+          </button>
+        </form>
+
+        <p class="modal__text">
+          Р.S.Ви нічим не ризикуєте!
+          <strong>Гарантія повернення коштів - 14 днів,</strong>
+          якщо курс вам не підійде
+        </p>
+        <p class="modal__text"><strong>До кінця акції залишилось:</strong></p>
+
+        <div class="countdown">
+          <div class="countdown__block">
+            <p class="countdown__content" id="countdownHours"></p>
+            <p class="countdown__info">Години</p>
+          </div>
+
+          <div class="countdown__block">
+            <p class="countdown__content" id="countdownMinutes"></p>
+            <p class="countdown__info">Хвилини</p>
+          </div>
+
+          <div class="countdown__block">
+            <p class="countdown__content" id="countdownSeconds"></p>
+            <p class="countdown__info">Секунди</p>
+          </div>
         </div>
       </div>
+
+      <!-- Message -->
+      <div class="popup">Innertext</div>
     </div>
 
     <script src="./js/timer.js"></script>
@@ -777,5 +851,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
