@@ -23,7 +23,6 @@ document.getElementById("formSend").addEventListener("click", function (e) {
   const form = document.querySelector("form");
   const popup = document.querySelector(".popup");
 
-  // --- Универсальная функция показа сообщений ---
   function showMessage(text, type) {
     popup.innerHTML = text;
     popup.classList.add("active", type);
@@ -34,7 +33,6 @@ document.getElementById("formSend").addEventListener("click", function (e) {
     }, 2000);
   }
 
-  // --- Валидация полей ---
   if (!email || !phone) {
     showMessage("Будь ласка, заповніть всі поля", "error");
     return;
@@ -51,21 +49,18 @@ document.getElementById("formSend").addEventListener("click", function (e) {
     phone: phone,
   };
 
-  // --- Отправка данных через EmailJS ---
   emailjs
     .send("service_9z809d1", "template_8tjxx76", params)
     .then(() => {
       showMessage("Дякуємо за заявку!", "success");
 
-      // Закрываем модалку
       document.querySelector(".modal")?.classList.remove("modal-open");
 
-      // Очищаем форму
       form.reset();
 
-      // После закрытия попапа — редирект
       setTimeout(() => {
         window.open(
+          // НИЖЕ ВСТАВИТЬ ССЫЛКУ НА СТРАНИЦУ ОПЛАТЫ
           "https://secure.wayforpay.com/page?vkh=690cd939-b63c-4946-8bc9-067d22d1dba8",
           "_blank"
         );
