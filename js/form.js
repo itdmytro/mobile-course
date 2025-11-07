@@ -48,6 +48,7 @@ document.getElementById("formSend").addEventListener("click", function (e) {
   const params = {
     email: email,
     phone: phone,
+    // АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ
     to_email: "spilkasd@gmail.com",
   };
 
@@ -58,7 +59,7 @@ document.getElementById("formSend").addEventListener("click", function (e) {
         document.querySelector(".modal")?.classList.remove("modal-open");
         form.reset();
 
-        // редирект только после анимации
+        // РЕДИРЕКТ НА WAYFORPAY
         window.location.href =
           "https://secure.wayforpay.com/page?vkh=690cd939-b63c-4946-8bc9-067d22d1dba8";
       });
